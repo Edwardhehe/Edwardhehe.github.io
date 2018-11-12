@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构设计疑问——欧美混凝土规范公式可以直接拿来用吗？</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">结构设计疑问——欧美混凝土规范公式可以直接拿来用吗？</h1>
+        <div class="show-content">
+          <blockquote><p><b>欧洲规范和美国混凝土规范给出了许多我国规范未给出的计算公式，那么我们可以利用我们项目的混凝土强度套用欧美规范进行设计吗？</b></p></blockquote><p>首先，美国ACI规范、欧洲规范Eurocode、欧洲模式规范（CEB-FIB Model Code）给出了不同的<b>混凝土强度测定</b>方法，各规范给出的材料强度标准值所对应的<i><b>分位值</b></i>也不尽相同。关于材料强度标准值的含义，可以看我这篇文字：<a href="https://www.jianshu.com/p/904d739817d1" target="_blank">什么是材料强度标准值</a>。</p><p>本文以<b>CEB-FIP规范</b>（以下简称模式规范）为例，介绍该规范材料强度的使用方法。</p><h4>1.混凝土强度保证率</h4><p>欧洲模式规范中指出：</p><blockquote><p>In analysis and design of concrete structures, the characteristiccompressive strength <img class="math-inline" src="https://math.jianshu.com/math?formula=f_%7Bck%7D" alt="f_{ck}" mathimg="1"> [MPa] is applied. This value may be derivedfrom strength tests by the criterion that 5 % of all possible strengthmeasurements for the specified concrete are expected to fall belowthe value<img class="math-inline" src="https://math.jianshu.com/math?formula=f_%7Bck%7D" alt="f_{ck}" mathimg="1">.    </p></blockquote><p>可见，该规范使用的材料强度标准值<img class="math-inline" src="https://math.jianshu.com/math?formula=f_%7Bck%7D" alt="f_{ck}" mathimg="1">同样具有9%的保证率。</p><h4>2.混凝土强度的确定方法</h4><p>模式规范给出：</p><blockquote><p>The reference compressive strength of the concrete according tothis Model Code is measured on cylinders 150/300 mm inaccordance with ISO 1920-3;</p></blockquote><p>该规范使用的材料强度测试标准试件为直径150mm高度300mm的圆柱体试件，与我国规范的立方体试件确定方法不同。对于相同批次的混凝土，按照该方法确定的材料强度等级比立方体试件小。</p><h4>3.混凝土强度等级</h4><p>模式规范同样用Cxx表示混凝土强度等级，xx表示<i><b>圆柱体抗压强度标准值</b></i>，同样为95%保证率。虽然该规范与我国规范对混凝土强度等级的取名方法一致，但实际材料强度不同，存在一个转换关系。</p><p>模式规范给出了<i><b>混凝土强度等级</b></i>和<i><b>立方体抗压强度等级标准值</b></i>的转化关系如下：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/3616152-aeb9ba4bc13f52a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption">CEB-FIP给出的强度等级与立方体抗压强度标准值值得转换关系</div>
+</div><p>可以发现，相同强度等级下，模式规范的混凝土轴心抗压强度大于我国规范（圆柱体抗压强度与棱柱体抗压强度基本相当，而<img class="math-inline" src="https://math.jianshu.com/math?formula=f_%7Bcu%2Ck%7D" alt="f_{cu,k}" mathimg="1">到<img class="math-inline" src="https://math.jianshu.com/math?formula=f_%7Bc%2Ck%7D" alt="f_{c,k}" mathimg="1">尚存在约为0.76的转换系数）</p><h4>4.小结</h4><p>最后用一个模式规范给出的表格作为今天的小结：</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/3616152-a4c0ea313f304c49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption">模式规范中各个材料性能参数</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

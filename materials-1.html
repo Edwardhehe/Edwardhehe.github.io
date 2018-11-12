@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构设计疑问——材料强度标准值</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">结构设计疑问——材料强度标准值</h1>
+        <div class="show-content">
+          <blockquote><p>结构设计中材料强度为什么要有95%保证率呢？那我们设计的结构是不是有5%的概率不安全呢？</p></blockquote><p>答：95%保证率是<i><b>材料强度标准值</b></i>，该值是不能用来做结构设计的。那我们的结构设计规范是如何解决这个问题的呢？</p><p>拿混凝土举例来说，是通过引入<i><b>材料分项系数</b></i><img class="math-inline" src="https://math.jianshu.com/math?formula=%5Cgamma%20_c" alt="\gamma _c" mathimg="1">来对材料强度进一步折减实现的：</p><p><img class="math-inline" src="https://math.jianshu.com/math?formula=f_c%3D%5Cfrac%7Bf_%7Bck%7D%7D%7B%5Cgamma%20_%7Bc%7D%7D%20%2C%5Cgamma%20_c%3D1.4" alt="f_c=\frac{f_{ck}}{\gamma _{c}} ,\gamma _c=1.4" mathimg="1"></p><p>实际工程中，混凝土材料可以看做是服从<i><b>正态分布</b></i>的，详见下图。材料强度标准值为有95%保证率的特征值，即实际材料低于此强度的概率为5%。在该特征值基础上除以一个大于1的系数，得到的材料强度保证率将有大幅提升，材料强度低于该值的可能性大大降低。<b>材料分项系数越大，结构的安全度越大。</b></p><p>那么这个值是怎么顶出来的呢？</p><p>其实这个值是的大小和材料本身的离散性有很大的关系，<b>离散性大的材料为了达到相同的可靠性，就需要除以较大的安全系数</b>。对于混凝土而言，该安全系数为1.4，而钢材的离散性较小，达到相同的可靠性所需要的安全系数也就越小，规范给出的取值为1.1。</p><p><br></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/3616152-2577ce8ca65fb27c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption">设计值与标准值</div>
+</div><p>这样子岂不是说材料强度标准值不一定要取95%吗？是不是取其他值也可以，只要配套有相应的材料分项系数就可以了？</p><p>事实上美国规范所采用的“混凝土强度标准值”保证率就不是95%，ACI规范利用<img class="math-inline" src="https://math.jianshu.com/math?formula=f_c%5E%2C" alt="f_c^," mathimg="1">（specified compressive strength）进行结构设计，该值的保证率大约为91%。</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

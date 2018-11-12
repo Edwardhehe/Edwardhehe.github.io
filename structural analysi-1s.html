@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构设计疑问——弹性计算靠不靠谱？</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">结构设计疑问——弹性计算靠不靠谱？</h1>
+        <div class="show-content">
+          <blockquote><p>混凝土是一个非线性材料，但我们在做大部分结构设计时均采用线弹性模型，这样计算结果准确吗？</p></blockquote><p>    现行<i>《混凝土结构设计规范》</i>（GB50010-2010）关于结构分析模型所采用的基本假定：</p><blockquote>
+<p>1.截面惯性矩可按<b><i>匀质的混凝土全截面计算</i></b>；</p>
+<p>2.不同受力状态下构件的截面刚度，宜考虑混凝土<i><b>开裂、徐变等因素的影响予以折减</b></i>。</p>
+</blockquote><p>    众所周知，混凝土截面设计时考虑了<b><i>混凝土材料的非线性</i></b>性质，但内力计算时却采用<i><b>弹性分析</b></i>方法得到的内力。这是否是因为现有的分析手段不能精确计算结构内力而采用的妥协的手段呢？</p><p>    其实，通过引入梁的<img class="math-inline" src="https://math.jianshu.com/math?formula=M-%5Cphi%20" alt="M-\phi " mathimg="1">关系曲线，并结合有限元分析方法可以较为精确的描述混凝土框架结构的力学特性，而梁的<img class="math-inline" src="https://math.jianshu.com/math?formula=M-%5Cphi%20" alt="M-\phi " mathimg="1">关系曲线又可以通过<i><b>纤维梁单元</b></i>进行计算。一些大型项目已经开始用这样的方法进行<b>辅助设计</b>。梁的<img class="math-inline" src="https://math.jianshu.com/math?formula=M-%5Cphi%20" alt="M-\phi " mathimg="1">关系是一个重要概念，它反映了梁的变形特性和延性指标，我们会在后续的章节中进行进一步分析。</p><p>    但是，利用该方法计算时间较长，且程序需要输入的参数较为复杂，因此现行规范仍使用弹性分析方法。</p><p>    对于该问题，结合帕克的<i>《钢筋混凝土结构》</i>做出如下说明：</p><p>    规范指出截面惯性矩可以按照匀质的全截面计算，但在混凝土梁开裂后<i>抗弯刚度</i>下降幅度约为30%~60%，刚度下降的幅度取决于受压区及受拉区钢筋配筋率的大小。这样看起来是一个粗略的假定，但构件的受力仅取决于构件之间的<i><b>相对刚度</b></i>，构件开裂后抗弯刚度的比值<i><b>可能</b></i>仍接近于初始未开裂状态。这将导致计算的内力与实际受力接近，但位移计算结果比实际小。实际上，我们在结构设计中也不会使用弹性计算位移来进行正常使用极限状态下的挠度验算，因此使用该方法计算结构内力一定程度上说是恰当的。</p><p>    但刚度的变化也会有以下不足：1.<b>梁</b>在<b>使用阶段往往已开裂</b>，而<b>柱</b>在<b>使用阶段并未开裂</b>（因为柱配筋率较高、轴压力较大），采用匀质截面刚度将导致柱计算弯矩比实际弯矩小，但在接近极限荷载时柱子抗弯刚度又会明显下降，弯矩又会重分布到梁中。2.在连续的T形梁中，开裂将导致负弯矩区抗弯刚度下降明显大于正弯矩区，从而使计算弯矩与实际弯矩产生较大的差别。对于可能出现的塑性内力重分布，规范给出了<b><i>梁弯矩调幅</i></b>和<b><i>刚度折减系数</i></b>等方法，这将在后续章节中陆续进行分析。</p><p>    此外还需要指出，使用弹性法计算弯矩还有以下优点：1.能使结构在使用阶段的应力尽可能减小，从而使裂缝宽度减小；2. 由弹性方法计算出的弯矩分布符合静力平衡条件及边界条件，可以看做是一个可能的<b>下限解，</b>并且计算方法相对简单<b>。</b></p><h4>总结</h4><p>    结构设计的计算最重要的不是准确性，而是<b>安全性</b>和<b>简便性。</b>现阶段已有成熟方法可以较为准确的计算框架内力，但根据笔者的经验，准确计算需要获取详细的材料参数，这在工程中几乎是不现实的。因为设计阶段虽然可以指定混凝土强度等级，但无法获得具体的材料参数，此外，一个结构本身因为各部分养护条件不一致，混凝土批次不一致等因素，都将导致结构混凝土强度有一定的差异，而要弄清各部分的材料参数成本极高。笔者认为，在材料参数不明确的情况下即使使用较复杂的计算方法获得的内力也不真实。</p><p>    现有结构设计规范的分析方法是<b>以弹性计算为基础</b>，结合<b><i>刚度折减</i></b>，<b><i>弯矩调幅</i></b>考虑构件内力重分布的影响。</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
