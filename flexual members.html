@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构设计疑问——受弯构件相关疑问</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">结构设计疑问——受弯构件相关疑问</h1>
+        <div class="show-content">
+          <blockquote><p>《混凝土结构设计规范》（GB50010-2011）第6.2.6条给出的参数<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Calpha_%7B1%7D%20" alt="\alpha_{1} " mathimg="1">和<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Cbeta_%7B1%7D" alt="\beta_{1}" mathimg="1">是什么意思，又是如何得到的呢？</p></blockquote><p>    规范中指出，参数<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Calpha_%7B1%7D" alt="\alpha_{1}" mathimg="1">和<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Cbeta_%7B1%7D" alt="\beta_{1}" mathimg="1">是将受弯梁的受压区应力图形转化为矩形的参数。</p><p>    受弯构件中，实际混凝土受压区应力图形如下图a）。根据规范的假定，应力图形曲线为<b>一段抛物线加一段水平线</b>。但这样在实际应用中涉及到求解曲边三角形的形心，应用比较繁琐。为了便于工程应用，规范提出将实际应力图形转化为矩形，并给出了转换系数。</p><p>    顾祥林教授编著的《混凝土结构基本原理》指出，转换的原则是<b>应力图形的合力<img class="math-inline" src="https://math.jianshu.com/math?formula=F_%7Bc%7D" alt="F_{c}" mathimg="1">与合力作用点<img class="math-inline" src="https://math.jianshu.com/math?formula=x_%7Bc%7D" alt="x_{c}" mathimg="1">相同</b>。转换关系为：</p><p>    <img class="math-inline" src="https://math.jianshu.com/math?formula=%5Csigma%20_%7Bc%7D%3D%5Calpha%20_%7B1%7Df_%7Bc%7D" alt="\sigma _{c}=\alpha _{1}f_{c}" mathimg="1">，<img class="math-inline" src="https://math.jianshu.com/math?formula=x%3D%5Cbeta%20_%7B1%7Dx_%7Bn%7D" alt="x=\beta _{1}x_{n}" mathimg="1"></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/3616152-5720c5e3b50c07d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption">混凝土受弯梁应力图形转换</div>
+</div><p>可以发现，该转换公式中，对于相同标号的混凝土，无论矩形截面尺寸如何参数<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Calpha_%7B1%7D" alt="\alpha_{1}" mathimg="1">和<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Cbeta%20_%7B1%7D" alt="\beta _{1}" mathimg="1">均为常数。下面给出一个不严谨的解释：</p><p>    我们知道，受弯构件的应变沿着截面高度大致<b><i>呈线性分布</i></b>，并且发生弯曲破坏的条件是受压区混凝土边缘纤维应变达到<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Cvarepsilon%20_%7Bcu%7D" alt="\varepsilon _{cu}" mathimg="1">。发生受弯破坏时，对于不同的受压区高度，混凝土受压区应力图形仅仅是在梁高度方向发生<b>拉伸和压缩</b>，因此当截面宽度保持不变时，对于相同标号的混凝土，其应力图形的形心高度与受压区高度的比值保持为定值，即参数<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Calpha_%7B1%7D" alt="\alpha_{1}" mathimg="1">与<img class="math-inline" src="https://math.jianshu.com/math?formula=%5Cbeta_%7B1%7D" alt="\beta_{1}" mathimg="1">保持为定值。</p><p><br></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/3616152-f0d238b2985551b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption">不同受压区高度下混凝土的应变分布</div>
+</div><blockquote><p>受弯构件中，各参数对构件的受弯承载力的影响是怎样的？</p></blockquote><p>    1.<b>增加配筋量</b>可以提升截面的开裂弯矩，但提升效果不明显。因为开裂前钢筋应力较小，对弯矩的贡献较小。</p><p>    2.增加<b>纵向受力钢筋用量</b>可以提升构件受弯承载力，但提升效果随着配筋率的提升而下降。因为配筋率过大时，梁发生超筋破坏，破坏时钢筋无法屈服。</p><p>    3.加大<b>截面尺寸</b>可以明显提升受弯承载力，是提升构件受弯承载力最有效的方法。因为该方法可以直接提高截面内力臂的长度。该方法可以在提升构件受弯承载力的同时能使<b>构件延性不下降</b>。</p><p>    4.<b>混凝土强度</b>提升，构件抗弯承载力提升，但<b>提升效果不明显</b>。</p><p>    5.发生适筋破坏时，<b>配筋率越低延性越好</b>；受拉钢筋配置相同时，<b>配置受压钢筋可以提升延性</b>。因为以上两个因素可以减小受压区高度，使得延性提升。抗震设计时，规范对截面<b>受压区高度作出限制</b>也是基于受压区高度减小，受弯构件延性提升这一原理。</p><p>    6.提升<b>受拉钢筋屈服强度</b>可以在不显著降低延性的同时，明显提升构件的受弯承载力，这也是推行高强钢筋的原因。</p><p>    下图是美国教材《Reinforced Concrete Mechanics and Design 6th edition》给出的一幅有助于我们理解的图，该图反映了各参数对截面抗弯承载力和延性的影响，单位为英制单位。</p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/3616152-b279b01ff97f7746.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption">各参数对截面抗弯承载力及延性的影响</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
