@@ -1,0 +1,14 @@
+html{
+    background-color: azure;
+}
+header{
+    /* font information */
+    background-color: azure;
+    font-size: medium;
+    font-family: 'Helvetica';
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 40px;
+
+
+}
