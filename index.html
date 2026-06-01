@@ -1,38 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="utf-8">
-
-    <title>Page Title</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Edwardhehe 的软件发布主页，展示中望 CAD 批量打印插件和 Windows 桌面备忘录。">
+    <title>Edwardhehe Software</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        Welcome to Edwardhehe's Main page!
+    <header class="site-header">
+        <a class="brand" href="https://github.com/Edwardhehe" aria-label="Edwardhehe GitHub">
+            <span class="brand-mark">E</span>
+            <span>Edwardhehe Software</span>
+        </a>
+        <nav class="top-nav" aria-label="主导航">
+            <a href="#software">软件</a>
+            <a href="#updates">更新</a>
+            <a href="https://github.com/Edwardhehe">GitHub</a>
+        </nav>
     </header>
-    <br>
-    <article>
-        <section class="article link">
-            <a  class="article name" href="/articles/materials-1.html">结构设计疑问——材料强度标准值</a>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Windows 工具 / CAD 插件 / 个人效率软件</p>
+                <h1>把日常需要的软件，<br>打磨成可分享的产品。</h1>
+                <p class="lead">
+                    这里整理软件、最新版本和下载入口。当前维护中望 CAD 批量打印插件与桌面备忘录。
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="#software">查看软件</a>
+                    <a class="button secondary" href="https://github.com/Edwardhehe">访问 GitHub</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-label="软件更新概览">
+                <div class="window-card">
+                    <img src="assets/batchprint-interface.svg" alt="中望 CAD 批量打印插件界面预览">
+                </div>
+            </div>
         </section>
-        <section class="article link">
-            <a  class="article name" href="/articles/structural analysi-1s.html">结构设计疑问——弹性计算靠不靠谱？</a>
+
+        <section id="software" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Software</p>
+                <h2>当前发布的软件</h2>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card cad-card">
+                    <div class="product-visual">
+                        <img src="assets/batchprint-interface.svg" alt="中望 CAD 批量打印插件运行界面">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-title-row">
+                            <h3>中望 CAD 批量打印插件</h3>
+                            <span class="version">v1.3.0</span>
+                        </div>
+                        <p>
+                            面向中望 CAD 2025 的批量打印插件。支持图框库、图号图名识别、
+                            跨 DWG 扫描、布局打印、PDF 命名、图纸目录和 PDF 工具。
+                        </p>
+                        <ul class="feature-list">
+                            <li>识别 A0-A3 及加长图，支持不同比例图纸。</li>
+                            <li>可跨文件批量打印，并处理布局视口和外部参照。</li>
+                            <li>内置 PDF 工具，支持预览、合并、批量改名。</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="button primary" href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/latest">下载最新版</a>
+                            <a class="button secondary" href="https://github.com/Edwardhehe/batchPrintZWCAD">源码仓库</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card memo-card">
+                    <div class="product-visual">
+                        <img src="assets/desktopmemo-interface.svg" alt="DesktopMemoWin 桌面备忘录运行界面">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-title-row">
+                            <h3>DesktopMemoWin</h3>
+                            <span class="version">v1.3.0</span>
+                        </div>
+                        <p>
+                            基于 .NET 8 和 WPF 的 Windows 桌面备忘录。用月历展示每天待办，
+                            支持系统托盘、回收站、开机启动和数据备份恢复。
+                        </p>
+                        <ul class="feature-list">
+                            <li>月历视图和列表视图，适合日常快速记录。</li>
+                            <li>支持完成状态、优先级、置顶和软删除。</li>
+                            <li>数据本地存储，可导入导出和备份恢复。</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a class="button primary" href="https://github.com/Edwardhehe/DesktopMemoWin/releases/latest">下载最新版</a>
+                            <a class="button secondary" href="https://github.com/Edwardhehe/DesktopMemoWin">源码仓库</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
-        <section class="article link">
-            <a  class="article name" href="/articles/materials-2.html">结构设计疑问——欧美混凝土规范公式可以直接拿来用吗？</a>
+
+        <section id="updates" class="section updates-section">
+            <div class="section-heading">
+                <p class="eyebrow">Release Notes</p>
+                <h2>最近更新</h2>
+            </div>
+            <div class="timeline">
+                <article class="update-item">
+                    <time datetime="2026-06-01">2026-06-01</time>
+                    <div>
+                        <h3>batchPrintZWCAD v1.3.0</h3>
+                        <p>新增 PDF 工具，支持预览、自然排序、手动调整顺序、合并 PDF、批量加编号、文件名替换和撤回改名。</p>
+                        <a href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/tag/v1.3.0">查看发布</a>
+                    </div>
+                </article>
+                <article class="update-item">
+                    <time datetime="2026-05-31">2026-05-31</time>
+                    <div>
+                        <h3>DesktopMemoWin v1.3.0</h3>
+                        <p>打磨主界面和弹窗布局，统一字体层级，优化已完成任务排序和不同分辨率下的显示效果。</p>
+                        <a href="https://github.com/Edwardhehe/DesktopMemoWin/releases/tag/v1.3.0">查看发布</a>
+                    </div>
+                </article>
+            </div>
         </section>
-        <section class="article link">
-            <a  class="article name" href="/articles/flexual members.html">结构设计疑问——受弯构件相关疑问</a>
-        </section>
-    </article>
-    <aside>
-        
-    </aside>
-    <footer>
-        <p class="contract">Edwardhehe</p>
-        <p class="contract">关于我最新的文章可以查看<a href="https://www.jianshu.com/u/5d30756355ca">我的简书主页</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <span>Edwardhehe Software</span>
+        <a href="https://github.com/Edwardhehe">github.com/Edwardhehe</a>
     </footer>
 </body>
 </html>
