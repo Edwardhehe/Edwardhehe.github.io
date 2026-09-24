@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Edwardhehe 的软件发布主页，展示 CAD 批量打印插件（支持中望 CAD 2025 和 AutoCAD 2013-2027）和 DesktopMemoWin 桌面备忘录。">
+    <meta name="description" content="Edwardhehe 的软件发布主页，展示 CAD 批量打印插件（支持中望 CAD 与 AutoCAD 2015-2027）和 DesktopMemoWin 桌面备忘录。">
     <title>Edwardhehe Software</title>
     <link rel="stylesheet" href="main.css">
 </head>
@@ -27,7 +27,7 @@
                 <h1>把日常高频使用的软件，<br>打磨成可持续更新的产品。</h1>
                 <p class="lead">
                     这里整理我正在维护的软件、最新版本和下载入口。
-                    当前主要发布 CAD 批量打印插件（支持中望 CAD 2025 与 AutoCAD 2013-2027）和 DesktopMemoWin 桌面备忘录。
+                    当前主要发布 CAD 批量打印插件（支持中望 CAD 与 AutoCAD 2015-2027）和 DesktopMemoWin 桌面备忘录。
                 </p>
                 <div class="hero-actions">
                     <a class="button primary" href="#software">查看软件</a>
@@ -55,19 +55,19 @@
                     <div class="product-content">
                         <div class="product-title-row">
                             <h3>CAD 批量打印插件</h3>
-                            <span class="version">v1.9.1</span>
+                            <span class="version">v1.15.7.6</span>
                         </div>
                         <p>
-                            同时支持<strong>中望 CAD 2025</strong>与<strong>AutoCAD 2013-2027</strong>的批量打印与批量拆图插件。
-                            支持图框识别、跨 DWG 扫描、布局打印、PDF 合并、CAD 原生预览、图纸目录生成，以及按图号和图名批量拆出轻量 DWG。
+                            同时支持<strong>中望 CAD</strong>与<strong>AutoCAD 2015-2027</strong>的批量打印与批量拆图插件。
+                            支持图框库学习与识别、跨 DWG 扫描、通用型矩形批打、单张框选打印、PDF/PNG/JPG/DWF/DWG 多格式输出、PDF 合并、CAD 原生预览、图纸目录，以及按图框拆出轻量 DWG。
                         </p>
                         <ul class="feature-list">
-                            <li>支持 A0-A3 及加长图纸识别，兼容不同比例图框。</li>
-                            <li>新增矩形框批量打印与单张框选打印，支持纸张/比例智能候选。</li>
-                            <li>支持批量打印、布局输出、PDF 合并与 CAD 原生预览。</li>
-                            <li>支持批量拆图，输出更轻量的新 DWG，并自动居中显示。</li>
-                            <li>AutoCAD 版提供多版本构建：2015-2024 / 2019-2020 / 2025+。</li>
-                            <li>首次加载自动安装 PDF 打印机配置，无需手动操作。</li>
+                            <li>图框库批量打印：学习图框后识别图号、图名、图幅与比例；支持动态块可见性与套用已有图框。</li>
+                            <li>通用型矩形批打与单张框选打印；外框支持闭合矩形与四线拼合，多文件按文件名/图号排序。</li>
+                            <li>多格式输出 PDF、PNG、JPG、DWF、DWG；PDF 可合并并可选保留单页；支持 CAD 原生预览。</li>
+                            <li>多文件批打可按源文件选择打印样式；扫描结果可累加；支持图纸目录与清单编辑。</li>
+                            <li>按图框拆 DWG，保留相交图元与 XCLIP 裁剪块；自动安装 LA_pdf / LA_png / LA_jpg / LA_dwf。</li>
+                            <li>发布包分三组：中望 CAD、AutoCAD 2015-2024、AutoCAD 2025-2027。</li>
                         </ul>
                         <div class="card-actions">
                             <a class="button primary" href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/latest">下载最新版</a>
@@ -110,6 +110,22 @@
             </div>
             <div class="timeline">
                 <article class="update-item">
+                    <time datetime="2026-09-21">2026-09-21</time>
+                    <div>
+                        <h3>CAD 批量打印插件 v1.15.7.6 — 四线外框与多文件排序</h3>
+                        <p>外框识别支持四条独立直线/开放多段线拼合矩形；多文件清单按文件名分组，同文件内按图号自然序；图框录入对话框首次显示不再整图 Regen，避免复杂图面卡顿。</p>
+                        <a href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/tag/v1.15.7.6">查看发布</a>
+                    </div>
+                </article>
+                <article class="update-item">
+                    <time datetime="2026-09-20">2026-09-20</time>
+                    <div>
+                        <h3>CAD 批量打印插件 v1.15.7.5 — 套用图框与多文件 CTB</h3>
+                        <p>新增图框可套用库内同尺寸条目；多文件批打可按源文件分别选择打印样式；修复 DPI 输入被夹回；DWG 拆图保留与打印范围相交的 XCLIP 裁剪块。</p>
+                        <a href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/tag/v1.15.7.5">查看发布</a>
+                    </div>
+                </article>
+                <article class="update-item">
                     <time datetime="2026-06-20">2026-06-20</time>
                     <div>
                         <h3>CAD 批量打印插件 v1.9.1 — 矩形框与单张打印</h3>
@@ -118,27 +134,11 @@
                     </div>
                 </article>
                 <article class="update-item">
-                    <time datetime="2026-06-08">2026-06-08</time>
-                    <div>
-                        <h3>CAD 批量打印插件 v1.6.0 — 首个 AutoCAD 多版本发布</h3>
-                        <p>从 ZWCAD API 完整迁移到 Autodesk.AutoCAD API，支持 AutoCAD 2013-2027 多目标构建（.NET Framework 4.7/4.8 + .NET 8），增加打印机自动安装、扫描诊断和序号叠加层功能，版本感知安装脚本自动匹配 AutoCAD 版本。</p>
-                        <a href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/tag/v1.6.0">查看发布</a>
-                    </div>
-                </article>
-                <article class="update-item">
                     <time datetime="2026-06-06">2026-06-06</time>
                     <div>
                         <h3>DesktopMemoWin v1.4.1</h3>
                         <p>修复主界面与侧边便签在托盘中的联动显示和隐藏问题，强化便签自动保存，并同步更新中文说明。</p>
                         <a href="https://github.com/Edwardhehe/DesktopMemoWin/releases/tag/v1.4.1">查看发布</a>
-                    </div>
-                </article>
-                <article class="update-item">
-                    <time datetime="2026-06-04">2026-06-04</time>
-                    <div>
-                        <h3>CAD 批量打印插件 v1.4.0（中望 CAD 版）</h3>
-                        <p>新增批量 CAD 拆图能力，并继续打磨批量打印窗口的产品化体验与 PDF 工具流程。</p>
-                        <a href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/tag/v1.4.0">查看发布</a>
                     </div>
                 </article>
             </div>
