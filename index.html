@@ -55,18 +55,18 @@
                     <div class="product-content">
                         <div class="product-title-row">
                             <h3>CAD 批量打印插件</h3>
-                            <span class="version">v1.15.7.6</span>
+                            <span class="version">v1.15.7.7</span>
                         </div>
                         <p>
                             同时支持<strong>中望 CAD</strong>与<strong>AutoCAD 2015-2027</strong>的批量打印与批量拆图插件。
-                            支持图框库学习与识别、跨 DWG 扫描、通用型矩形批打、单张框选打印、PDF/PNG/JPG/DWF/DWG 多格式输出、PDF 合并、CAD 原生预览、图纸目录，以及按图框拆出轻量 DWG。
+                            支持图框库学习与识别、跨 DWG 与按文件夹扫描、通用型矩形批打、单张框选打印、PDF/PNG/JPG/DWF/DWG 多格式输出、PDF 合并、打印对象线宽、CAD 原生预览、图纸目录，以及按图框拆出轻量 DWG。
                         </p>
                         <ul class="feature-list">
-                            <li>图框库批量打印：学习图框后识别图号、图名、图幅与比例；支持动态块可见性与套用已有图框。</li>
+                            <li>图框库批量打印：学习图框后识别图号、图名、图幅与比例；支持动态块可见性、套用已有图框与加长图倍数命名（如 A1x1.25）。</li>
                             <li>通用型矩形批打与单张框选打印；外框支持闭合矩形与四线拼合，多文件按文件名/图号排序。</li>
-                            <li>多格式输出 PDF、PNG、JPG、DWF、DWG；PDF 可合并并可选保留单页；支持 CAD 原生预览。</li>
-                            <li>多文件批打可按源文件选择打印样式；扫描结果可累加；支持图纸目录与清单编辑。</li>
-                            <li>按图框拆 DWG，保留相交图元与 XCLIP 裁剪块；自动安装 LA_pdf / LA_png / LA_jpg / LA_dwf。</li>
+                            <li>多格式输出 PDF、PNG、JPG、DWF、DWG，支持 CAD 原生预览；PDF 可合并并可选保留单页，合并文件自动加“_合并”后缀；可按对象线宽出图，CTB 颜色照常生效。</li>
+                            <li>多文件批打支持按文件夹收集 DWG、空间快速勾选，UCS 图框不再打斜；可按源文件选择打印样式，支持图纸目录与清单编辑。</li>
+                            <li>按图框拆 DWG：模型空间用 Wblock + XCLIP 裁剪写出轻量图，保留相交图元；自动安装 LA_pdf / LA_png / LA_jpg / LA_dwf。</li>
                             <li>发布包分三组：中望 CAD、AutoCAD 2015-2024、AutoCAD 2025-2027。</li>
                         </ul>
                         <div class="card-actions">
@@ -109,6 +109,14 @@
                 <h2>最近更新</h2>
             </div>
             <div class="timeline">
+                <article class="update-item">
+                    <time datetime="2026-09-26">2026-09-26</time>
+                    <div>
+                        <h3>CAD 批量打印插件 v1.15.7.7 — 对象线宽与文件夹批打</h3>
+                        <p>新增“打印对象线宽”，CTB 颜色照常生效、线宽按对象输出；多文件批打支持按文件夹收集与空间快速勾选，UCS 模型图框不再打斜；修复合并 PDF 单张时卡住和进度条显示，合并文件加“_合并”后缀；模型拆图改为 Wblock + XCLIP；加长图命名新增倍数配置（A1x1.25）。</p>
+                        <a href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/tag/v1.15.7.7">查看发布</a>
+                    </div>
+                </article>
                 <article class="update-item">
                     <time datetime="2026-09-21">2026-09-21</time>
                     <div>
