@@ -55,7 +55,7 @@
                     <div class="product-content">
                         <div class="product-title-row">
                             <h3>CAD 批量打印插件</h3>
-                            <span class="version">v1.15.7.7</span>
+                            <span class="version">v1.15.7.9</span>
                         </div>
                         <p>
                             同时支持<strong>中望 CAD</strong>与<strong>AutoCAD 2015-2027</strong>的批量打印与批量拆图插件。
@@ -63,7 +63,7 @@
                         </p>
                         <ul class="feature-list">
                             <li>图框库批量打印：学习图框后识别图号、图名、图幅与比例；支持动态块可见性、套用已有图框与加长图倍数命名（如 A1x1.25）。</li>
-                            <li>通用型矩形批打与单张框选打印；外框支持闭合矩形与四线拼合，多文件按文件名/图号排序。</li>
+                            <li>通用型矩形批打与单张框选打印；外框支持闭合矩形与四线拼合，可按图框右下角模式智能识别图名图号，支持文件名设置，多文件按文件名/图号排序。</li>
                             <li>多格式输出 PDF、PNG、JPG、DWF、DWG，支持 CAD 原生预览；PDF 可合并并可选保留单页，合并文件自动加“_合并”后缀；可按对象线宽出图，CTB 颜色照常生效。</li>
                             <li>多文件批打支持按文件夹收集 DWG、空间快速勾选，UCS 图框不再打斜；可按源文件选择打印样式，支持图纸目录与清单编辑。</li>
                             <li>按图框拆 DWG：模型空间用 Wblock + XCLIP 裁剪写出轻量图，保留相交图元；自动安装 LA_pdf / LA_png / LA_jpg / LA_dwf。</li>
@@ -109,6 +109,14 @@
                 <h2>最近更新</h2>
             </div>
             <div class="timeline">
+                <article class="update-item">
+                    <time datetime="2026-10-02">2026-10-02</time>
+                    <div>
+                        <h3>CAD 批量打印插件 v1.15.7.9 — 智能识别图名图号与打印预热</h3>
+                        <p>通用型批打新增按图框右下角模式智能识别图名图号（默认关闭），取字按格子局部坐标判定、不再把块名拼进图号，并新增“文件名设置”；批打前分步预热打印管线，消除首张打印卡顿（感谢 @dangfj110）；设置保存防崩溃，多文件批打改为累加清单，合并 PDF 不再覆盖旧文件，同批重名从 _1 编号。</p>
+                        <a href="https://github.com/Edwardhehe/batchPrintZWCAD/releases/tag/v1.15.7.9">查看发布</a>
+                    </div>
+                </article>
                 <article class="update-item">
                     <time datetime="2026-09-26">2026-09-26</time>
                     <div>
